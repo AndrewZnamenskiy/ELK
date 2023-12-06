@@ -55,24 +55,24 @@
 в виде потка данны:
 
 '''
-  log_format logstash '$remote_addr - $remote_user [$time_local] "$host" '
+	  log_format logstash '$remote_addr - $remote_user [$time_local] "$host" '
                       '"$request" $status $body_bytes_sent '
                       '"$http_referer" "$http_user_agent"';
 
-  # Send logs to Logstash
-  access_log syslog:server=logstash:5044,tag=nginx_access logstash;
-  error_log syslog:server=logstash:5044,tag=nginx_error notice;
+  	# Send logs to Logstash	
+	  access_log syslog:server=logstash:5044,tag=nginx_access logstash;
+	  error_log syslog:server=logstash:5044,tag=nginx_error notice;
 
 ''' 
 
 Настройка конфигурации Logstash в формате json:
 
 '''
-input {
-  syslog {
-    port => 5044
-}
-}
+	input {
+  	syslog {
+    	port => 5044
+	}
+	}
 '''
 
 
@@ -111,11 +111,13 @@ input {
 Настройка конфигурации Logstash в формате json:
 
 '''
-input {
-  beats {
-    port => 5044
-}
-}
+
+	input {
+	  beats {
+    	port => 5044
+	}
+	}
+
 '''
 
 
