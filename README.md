@@ -52,7 +52,7 @@
 
 В данном решении Logstash сам выступает сборщиком логов для передачи их в Kibana.
 Для этих целей в конфигурации NGINX логи настраиваются для передечи в формате syslog
-в виде потка данны:
+в виде потока данны:
 
 
 ![Commit Task3](https://github.com/AndrewZnamenskiy/ELK/blob/main/img/task3p0.png)
