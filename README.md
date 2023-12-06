@@ -58,8 +58,7 @@
 	  log_format logstash '$remote_addr - $remote_user [$time_local] "$host" '
                       '"$request" $status $body_bytes_sent '
                       '"$http_referer" "$http_user_agent"';
-
-  	# Send logs to Logstash	
+	
 	  access_log syslog:server=logstash:5044,tag=nginx_access logstash;
 	  error_log syslog:server=logstash:5044,tag=nginx_error notice;
 
@@ -68,11 +67,13 @@
 Настройка конфигурации Logstash в формате json:
 
 '''
+
 	input {
-  	syslog {
-    	port => 5044
+  	    syslog {
+    	    port => 5044
 	}
 	}
+
 '''
 
 
@@ -102,7 +103,6 @@
 Для этих целей в конфигурации NGINX настраиваются логи для сохранения в файл:
 
 '''
- # logs for Filebeat harvester
         access_log /var/log/nginx/access.log;
         error_log /var/log/nginx/error.log;
 '''
@@ -124,5 +124,6 @@
 *Скриншот логов полученных с Logstash. Логи NGINX Logstash получает от Filebeat*
 
 ![Commit Task4](https://github.com/AndrewZnamenskiy/ELK/blob/main/img/task4p1.png)
+
 
 
