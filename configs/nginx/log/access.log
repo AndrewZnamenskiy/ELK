@@ -1,0 +1,5 @@
+192.168.101.9 - - [03/Dec/2023:17:17:51 +0000] "GET /river.jpg HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"
+192.168.101.9 - - [03/Dec/2023:17:17:52 +0000] "GET /favicon.ico HTTP/1.1" 404 153 "http://192.168.101.55:8080/river.jpg" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"
+192.168.101.9 - - [03/Dec/2023:19:58:10 +0000] "GET /river.jpg HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"
+192.168.101.9 - - [03/Dec/2023:19:58:11 +0000] "GET /favicon.ico HTTP/1.1" 404 153 "http://192.168.101.55:8080/river.jpg" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"
+192.168.101.9 - - [03/Dec/2023:19:58:17 +0000] "GET /ford.jpg HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"

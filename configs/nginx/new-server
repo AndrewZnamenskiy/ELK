@@ -1,0 +1,20 @@
+server {
+	listen 80;
+
+	root /var/www;
+	server_name _;
+
+#	location / {
+#		proxy_pass http://192.168.101.56:8080;
+#	}
+
+	location = /favicon.ico {
+		access_log off;
+		return 204;
+	}
+	
+	   location ~* .(jpg|jpe?g|cfg|rom|boot)$ {
+        root /var/www;
+	}
+
+	}
