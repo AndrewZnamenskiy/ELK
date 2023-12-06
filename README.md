@@ -54,7 +54,7 @@
 Для этих целей в конфигурации NGINX логи настраиваются для передечи в формате syslog
 в виде потка данны:
 
-'''
+'
 	  log_format logstash '$remote_addr - $remote_user [$time_local] "$host" '
                       '"$request" $status $body_bytes_sent '
                       '"$http_referer" "$http_user_agent"';
@@ -62,7 +62,7 @@
 	  access_log syslog:server=logstash:5044,tag=nginx_access logstash;
 	  error_log syslog:server=logstash:5044,tag=nginx_error notice;
 
-''' 
+' 
 
 Настройка конфигурации Logstash в формате json:
 
@@ -102,10 +102,10 @@
 В данном решении Logstash получает логи от сбощика логов Filebeat для передачи их в Kibana.
 Для этих целей в конфигурации NGINX настраиваются логи для сохранения в файл:
 
-'''
+'
         access_log /var/log/nginx/access.log;
         error_log /var/log/nginx/error.log;
-'''
+'
 
 
 Настройка конфигурации Logstash в формате json:
